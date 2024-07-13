@@ -6,4 +6,5 @@
 *polyconvert --osm-files hyderabad.osm --net-file hyderabad.net.xml --type-file osmPolyconvert.typ.xml -o hyderabad.poly.xml
 *python /home/vegam/sumo/tools/randomTrips.py -n hyderabad.net.xml -r hyderabad.rou.xml -e 50 -l,  generates the routes file
 *sumo-gui hyderabad.sumo.cfg,  sumo gui will open, make necessary changes for desired simulation #starts the simulation
-*sumo -c hyderabad.sumo.g --fcd-output hyderbad.sumo.xml #generates trace files
+*sumo -c hyderabad.sumo.g --fcd-output hyderabad.sumo.xml #generates 
+*python /home/vegam/sumo/tools/traceExporter.py --fcd-input hyderabad.sumo.xml --ns2config-output hyderabad.tcl --ns2mobility-output mobility.tcl --ns2activity-output activity.tcl
