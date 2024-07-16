@@ -1,0 +1,6 @@
+** mobility.tcl: This file contains the mobility traces of vehicles, including their positions and velocities over time. It provides detailed trajectories of vehicles within the simulation.
+
+** activity.tcl: This file contains information about the activities of vehicles, such as their departure times, arrival times, and stops along their routes.
+
+** ns2config-output.tcl: This file includes configuration information for the NS-2 simulator, which can be used to recreate the simulation environment.
+
