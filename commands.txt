@@ -1,10 +1,10 @@
-*osmium extract --bbox 78.493540,17.365872,78.501936,17.373879 hyderabad.osm.pbf -o hyderabad_clipped.osm.pbf
-*osmconvert hyderabad_clipped.osm.pbf -o=hyderabad.osm
+*osmium extract --bbox 80.905552,26.832788,80.946610,26.856222 central-zone-latest.osm.pbf -o lucknow.osm.pbf(min_lon=The westernmost longitude of the bounding box,min_lat=The southernmost latitude of the bounding box.,max_lon=The easternmost longitude of the bounding box.,max_lat=The northernmost latitude of the bounding box.)
+*osmconvert lucknow.osm.pbf -o=lucknow.osm
 *netconvert --osm-files hyderabad.osm -o hyderabad.net.xml
 *copied osmPolyconvert.typ.xml from sumo/data/typemap to working dir
 *fixed the fill attribute of osmPolyconvert.typ.xml by changing it from force to true
 *polyconvert --osm-files hyderabad.osm --net-file hyderabad.net.xml --type-file osmPolyconvert.typ.xml -o hyderabad.poly.xml
-*python /home/vegam/sumo/tools/randomTrips.py -n hyderabad.net.xml -r hyderabad.rou.xml -e 50 -l,  generates the routes file
-*sumo-gui hyderabad.sumo.cfg,  sumo gui will open, make necessary changes for desired simulation #starts the simulation
-*sumo -c hyderabad.sumo.g --fcd-output hyderabad.sumo.xml #generates 
-*python /home/vegam/sumo/tools/traceExporter.py --fcd-input hyderabad.sumo.xml --ns2config-output hyderabad.tcl --ns2mobility-output mobility.tcl --ns2activity-output activity.tcl
+*python /home/vegam/sumo/tools/randomTrips.py -n lucknow.net.xml -r lucknow.rou.xml -e 50 -l,  generates the routes file
+*sumo-gui lucknow.sumo.cfg,  sumo gui will open, make necessary changes for desired simulation #starts the simulation
+*sumo -c lucknow.sumo.cfg --fcd-output lucknow.sumo.xml  
+*python /home/vegam/sumo/tools/traceExporter.py --fcd-input lucknow.sumo.xml --ns2config-output lucknow.tcl --ns2mobility-output mobility.tcl --ns2activity-output activity.tcl
