@@ -5,8 +5,9 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 import matplotlib.pyplot as plt
-#Parses the tcl files and returns a DataFrame with the extracted data.
+from sklearn.model_selection import train_test_split
 
+#Parses the tcl files and returns a DataFrame with the extracted data.
 def parse_tcl_file(tcl_file):
     with open(tcl_file, 'r') as file:
         lines = file.readlines()
