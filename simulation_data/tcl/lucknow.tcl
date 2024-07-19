@@ -11,11 +11,11 @@ append opt(mf) /mobility.tcl
 
 # set start/stop time
 set opt(start) 0.0
-set opt(stop) 100.00000000000001
+set opt(stop) 359.99999999999994
 
 # set floor size
 set opt(x) 5400.35
-set opt(y) 3319.69
-set opt(min-x) 722.61
+set opt(y) 3580.98
+set opt(min-x) 566.77
 set opt(min-y) 501.0
 
