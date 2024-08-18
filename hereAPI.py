@@ -123,7 +123,7 @@ def simulate_flooded_roads(edge_ids, intensity=0.5):
             print(f"Error simulating flood on edge {edge}: {e}")
 
 def run_simulation():
-    api_key = 'HUXG-svKWXMvRQjtzZMZ1KM4bx5-VBnecbkZjxEJOZk'
+    api_key = 'API_KEY'
     bbox = 'bbox:80.905552,26.832788,80.946610,26.856222'
     #print("Available edges:", traci.edge.getIDList())
     step = 0
